@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
-    String TAG = "com.liujennifer.p3l03liujennifer_sharedpreferences";
+    String TAG = "com.liujennifer.p03l05liujennifer_lifecycle";
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
     ConstraintLayout layout;
@@ -24,21 +24,21 @@ public class MainActivity extends AppCompatActivity {
     int countonStop = 0;
     int countonRestart = 0;
     int countonDestroy = 0;
-
+    TextView create1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        create1 = findViewById(R.id.onCreate1);
         sharedPreferences = getSharedPreferences(TAG, MODE_PRIVATE);
         editor = sharedPreferences.edit();
         setInitialValues();
         countonCreate++;
         storevalue();
-        onPause();
-
     }
 
     private void setInitialValues() {
+        //create1.setText(sharedPreferences.getString(create1.getTag().toString(), "onCreate: 0"));
         countonCreate = sharedPreferences.getInt("onCreate", 0);
         countonStart = sharedPreferences.getInt("onStart", 0);
         countonResume = sharedPreferences.getInt("onResume", 0);
@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         countonStop = sharedPreferences.getInt("onStop", 0);
         countonRestart = sharedPreferences.getInt("onRestart", 0);
         countonDestroy = sharedPreferences.getInt("onDestroy", 0);
+
     }
 
     private void storevalue() {
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         editor.putInt("onRestart", countonRestart);
         editor.putInt("onDestroy", countonDestroy);
         editor.apply();
+        //create1.setText("onCreate" + countonCreate);
         System.out.println("onCreate:" +countonCreate);
         System.out.println("onStart:" +countonStart);
         System.out.println("onResume:" +countonResume);
