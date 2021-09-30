@@ -24,7 +24,6 @@
 
     <TextView
         android:id="@+id/onCreate1"
-        android:tag="onCreate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -40,6 +39,7 @@
         app:layout_constraintVertical_bias=".20"/>
 
     <TextView
+        android:id="@+id/onStart1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -55,6 +55,7 @@
         app:layout_constraintVertical_bias=".25"/>
 
     <TextView
+        android:id="@+id/onResume1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -70,6 +71,7 @@
         app:layout_constraintVertical_bias=".30"/>
 
     <TextView
+        android:id="@+id/onPause1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -85,6 +87,7 @@
         app:layout_constraintVertical_bias=".35"/>
 
     <TextView
+        android:id="@+id/onStop1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -100,6 +103,7 @@
         app:layout_constraintVertical_bias=".40"/>
 
     <TextView
+        android:id="@+id/onRestart1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -114,6 +118,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias=".45"/>
     <TextView
+        android:id="@+id/onDestroy1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -144,6 +149,7 @@
         app:layout_constraintVertical_bias=".6"/>
 
     <TextView
+        android:id="@+id/onCreate2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -159,6 +165,7 @@
         app:layout_constraintVertical_bias=".65"/>
 
     <TextView
+        android:id="@+id/onStart2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -174,6 +181,7 @@
         app:layout_constraintVertical_bias=".7"/>
 
     <TextView
+        android:id="@+id/onResume2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -189,6 +197,7 @@
         app:layout_constraintVertical_bias=".75"/>
 
     <TextView
+        android:id="@+id/onPause2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -204,6 +213,7 @@
         app:layout_constraintVertical_bias=".8"/>
 
     <TextView
+        android:id="@+id/onStop2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -219,6 +229,7 @@
         app:layout_constraintVertical_bias=".85"/>
 
     <TextView
+        android:id="@+id/onRestart2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -234,6 +245,7 @@
         app:layout_constraintVertical_bias=".9"/>
 
     <TextView
+        android:id="@+id/onDestroy2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"

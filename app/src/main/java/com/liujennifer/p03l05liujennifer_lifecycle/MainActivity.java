@@ -24,12 +24,52 @@ public class MainActivity extends AppCompatActivity {
     int countonStop = 0;
     int countonRestart = 0;
     int countonDestroy = 0;
-    TextView create1;
+
+    TextView create;
+    TextView start;
+    TextView resume;
+    TextView pause;
+    TextView stop;
+    TextView restart;
+    TextView destroy;
+
+    int lifecountonCreate = 0;
+    int lifecountonStart = 0;
+    int lifecountonResume = 0;
+    int lifecountonPause = 0;
+    int lifecountonStop = 0;
+    int lifecountonRestart = 0;
+    int lifecountonDestroy = 0;
+
+    TextView lifecreate;
+    TextView lifestart;
+    TextView liferesume;
+    TextView lifepause;
+    TextView lifestop;
+    TextView liferestart;
+    TextView lifedestroy;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        create1 = findViewById(R.id.onCreate1);
+
+        create = findViewById(R.id.onCreate1);
+        start = findViewById(R.id.onStart1);
+        resume = findViewById(R.id.onResume1);
+        pause = findViewById(R.id.onPause1);
+        stop = findViewById(R.id.onStop1);
+        restart = findViewById(R.id.onRestart1);
+        destroy = findViewById(R.id.onDestroy1);
+
+        lifecreate = findViewById(R.id.onCreate2);
+        lifestart = findViewById(R.id.onStart2);
+        liferesume = findViewById(R.id.onResume2);
+        lifepause = findViewById(R.id.onPause2);
+        lifestop = findViewById(R.id.onStop2);
+        liferestart = findViewById(R.id.onRestart2);
+        lifedestroy = findViewById(R.id.onDestroy2);
+
         sharedPreferences = getSharedPreferences(TAG, MODE_PRIVATE);
         editor = sharedPreferences.edit();
         setInitialValues();
@@ -38,7 +78,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setInitialValues() {
-        //create1.setText(sharedPreferences.getString(create1.getTag().toString(), "onCreate: 0"));
+        create.setText("onCreate: " + countonCreate);
+        start.setText("onStart: " + countonStart);
+        resume.setText("onStart: " + countonResume);
+        pause.setText("onPause: " + countonPause);
+        stop.setText("onStop: " + countonStop);
+        restart.setText("onRestart: " + countonRestart);
+        destroy.setText("onDestroy: " + countonDestroy);
         countonCreate = sharedPreferences.getInt("onCreate", 0);
         countonStart = sharedPreferences.getInt("onStart", 0);
         countonResume = sharedPreferences.getInt("onResume", 0);
@@ -46,6 +92,13 @@ public class MainActivity extends AppCompatActivity {
         countonStop = sharedPreferences.getInt("onStop", 0);
         countonRestart = sharedPreferences.getInt("onRestart", 0);
         countonDestroy = sharedPreferences.getInt("onDestroy", 0);
+        lifecreate.setText("onCreate: " + countonCreate);
+        lifestart.setText("onStart: " + countonStart);
+        liferesume.setText("onStart: " + countonResume);
+        lifepause.setText("onPause: " + countonPause);
+        lifestop.setText("onStop: " + countonStop);
+        liferestart.setText("onRestart: " + countonRestart);
+        lifedestroy.setText("onDestroy: " + countonDestroy);
 
     }
 
@@ -58,15 +111,17 @@ public class MainActivity extends AppCompatActivity {
         editor.putInt("onRestart", countonRestart);
         editor.putInt("onDestroy", countonDestroy);
         editor.apply();
-        //create1.setText("onCreate" + countonCreate);
-        System.out.println("onCreate:" +countonCreate);
-        System.out.println("onStart:" +countonStart);
-        System.out.println("onResume:" +countonResume);
-        System.out.println("onPause:" +countonPause);
-        System.out.println("onStop:" +countonStop);
-        System.out.println("onRestart:" +countonRestart);
-        System.out.println("onDestroy:" +countonDestroy);
-        System.out.println("---------------------------");
+        create.setText("onCreate: " + countonCreate);
+        start.setText("onStart: " + countonStart);
+        resume.setText("onStart: " + countonResume);
+        pause.setText("onPause: " + countonPause);
+        stop.setText("onStop: " + countonStop);
+        restart.setText("onRestart: " + countonRestart);
+        destroy.setText("onDestroy: " + countonDestroy);
+
+
+
+
     }
 
     @Override
