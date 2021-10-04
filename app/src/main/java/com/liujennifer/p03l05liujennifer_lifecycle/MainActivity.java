@@ -74,31 +74,32 @@ public class MainActivity extends AppCompatActivity {
         editor = sharedPreferences.edit();
         setInitialValues();
         countonCreate++;
+        lifecountonCreate++;
         storevalue();
     }
 
     private void setInitialValues() {
         create.setText("onCreate: " + countonCreate);
         start.setText("onStart: " + countonStart);
-        resume.setText("onStart: " + countonResume);
+        resume.setText("onResume: " + countonResume);
         pause.setText("onPause: " + countonPause);
         stop.setText("onStop: " + countonStop);
         restart.setText("onRestart: " + countonRestart);
         destroy.setText("onDestroy: " + countonDestroy);
-        countonCreate = sharedPreferences.getInt("onCreate", 0);
-        countonStart = sharedPreferences.getInt("onStart", 0);
-        countonResume = sharedPreferences.getInt("onResume", 0);
-        countonPause = sharedPreferences.getInt("onPause", 0);
-        countonStop = sharedPreferences.getInt("onStop", 0);
-        countonRestart = sharedPreferences.getInt("onRestart", 0);
-        countonDestroy = sharedPreferences.getInt("onDestroy", 0);
-        lifecreate.setText("onCreate: " + countonCreate);
-        lifestart.setText("onStart: " + countonStart);
-        liferesume.setText("onStart: " + countonResume);
-        lifepause.setText("onPause: " + countonPause);
-        lifestop.setText("onStop: " + countonStop);
-        liferestart.setText("onRestart: " + countonRestart);
-        lifedestroy.setText("onDestroy: " + countonDestroy);
+        lifecountonCreate = sharedPreferences.getInt("onCreate", 0);
+        lifecountonStart = sharedPreferences.getInt("onStart", 0);
+        lifecountonResume = sharedPreferences.getInt("onResume", 0);
+        lifecountonPause = sharedPreferences.getInt("onPause", 0);
+        lifecountonStop = sharedPreferences.getInt("onStop", 0);
+        lifecountonRestart = sharedPreferences.getInt("onRestart", 0);
+        lifecountonDestroy = sharedPreferences.getInt("onDestroy", 0);
+        lifecreate.setText("onCreate: " + lifecountonCreate);
+        lifestart.setText("onStart: " + lifecountonStart);
+        liferesume.setText("onResume: " + lifecountonResume);
+        lifepause.setText("onPause: " + lifecountonPause);
+        lifestop.setText("onStop: " + lifecountonStop);
+        liferestart.setText("onRestart: " + lifecountonRestart);
+        lifedestroy.setText("onDestroy: " + lifecountonDestroy);
 
     }
 
@@ -113,11 +114,19 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
         create.setText("onCreate: " + countonCreate);
         start.setText("onStart: " + countonStart);
-        resume.setText("onStart: " + countonResume);
+        resume.setText("onResume: " + countonResume);
         pause.setText("onPause: " + countonPause);
         stop.setText("onStop: " + countonStop);
         restart.setText("onRestart: " + countonRestart);
         destroy.setText("onDestroy: " + countonDestroy);
+        lifecreate.setText("onCreate: " + lifecountonCreate);
+        lifestart.setText("onStart: " + lifecountonStart);
+        liferesume.setText("onResume: " + lifecountonResume);
+        lifepause.setText("onPause: " + lifecountonPause);
+        lifestop.setText("onStop: " + lifecountonStop);
+        liferestart.setText("onRestart: " + lifecountonRestart);
+        //lifedestroy.setText("onDestroy: " + lifecountonDestroy);
+
 
 
 
@@ -128,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         countonStart++;
+        lifecountonStart++;
         storevalue();
     }
 
@@ -135,6 +145,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         countonResume++;
+        lifecountonResume++;
         storevalue();
     }
 
@@ -142,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         countonPause++;
+        lifecountonPause++;
         storevalue();
     }
 
@@ -149,6 +161,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
         countonStop++;
+        lifecountonStop++;
         storevalue();
     }
 
@@ -156,6 +169,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onRestart() {
         super.onRestart();
         countonRestart++;
+        lifecountonRestart++;
         storevalue();
     }
 
@@ -163,6 +177,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         countonDestroy++;
+        lifecountonDestroy++;
         storevalue();
     }
 }
