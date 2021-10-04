@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
         lifepause.setText("onPause: " + lifecountonPause);
         lifestop.setText("onStop: " + lifecountonStop);
         liferestart.setText("onRestart: " + lifecountonRestart);
-        //lifedestroy.setText("onDestroy: " + lifecountonDestroy);
+        lifedestroy.setText("onDestroy: " + lifecountonDestroy);
 
 
 
